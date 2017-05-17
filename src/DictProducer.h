@@ -3,9 +3,11 @@
 
 //#include "SplitTool"
 
+#include "Configuration.h"
 #include <string>
 #include <vector>
 #include <map>
+#include <unordered_map>
 
 
 namespace sc
@@ -39,9 +41,10 @@ public:
 	void push_dict(const std::string & word);
 
 private:
+	Configuration m_conf;
 	std::string m_dir;					//语料库文件存放绝对路径
 	std::vector<std::string> m_files;	//语料库文件的绝对路径集合
-	std::map<std::string, int> m_dict;	//配置文件内容
+	std::map<std::string, int> m_dict;	//词典数据
 
 //	SplitTool * m_splitTool;			//分词工具
 };
