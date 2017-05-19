@@ -7,10 +7,10 @@
 namespace sc
 {
 
-class Configuartion
+class Configuration
 {
 public:
-	Configuartion(const std::string & filePath = "../conf/my.conf");
+	Configuration(const std::string & filePath = "../conf/my.conf");
 	std::map<std::string, std::string> & getConfigMap();
 private:
 	void analysis();

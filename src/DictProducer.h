@@ -17,7 +17,7 @@ class DictProducer
 {
 public:
 	//构造函数
-	DictProducer(const std::string & dir);
+	DictProducer(const std::string & dir = "");
 	//处理中文的构造函数
 //	DictProducer(const std::string & dir, SplitTool * splitTool);
 
@@ -27,7 +27,7 @@ public:
 //	void build_cn_dict();
 
 	//将词典写入文件
-	void store_dict(const char * filepath);
+	void store_dict();
 
 	//查看文件路径，测试用
 	void show_files() const;

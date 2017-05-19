@@ -1,4 +1,4 @@
-#include "Configuartion.h"
+#include "Configuration.h"
 
 #include <iostream>
 #include <fstream>
@@ -7,24 +7,25 @@
 namespace sc
 {
 
-Configuartion::Configuartion(const std::string & filePath)
+Configuration::Configuration(const std::string & filePath)
 : m_filePath(filePath)
 {
 	analysis();
 }
 
-std::map<std::string, std::string> & Configuartion::getConfigMap()
+std::map<std::string, std::string> & Configuration::getConfigMap()
 {
 	return m_configMap;
 }
 
-void Configuartion::analysis()
+void Configuration::analysis()
 {
 	std::ifstream conf;
 	conf.open(m_filePath.c_str());
+	std::cout << m_filePath.c_str() << std::endl;
 	if(!conf.good())
 	{
-		std::cout << "ifstream open error!" << std::endl;
+		std::cout << "ifstream of Configuration open error!" << std::endl;
 	}
 	std::string line, key, value;
 	while(getline(conf, line))
